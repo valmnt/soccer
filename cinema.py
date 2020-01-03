@@ -2,9 +2,7 @@ import requests
 import bs4
 import webbrowser
 
-index = open('index.html', "w")
-
-link = ["http://channelstream.net/rmcsport_1.php", "http://channelstream.net/rmcsport_2.php",  "http://channelstream.net/rmcsport_3.php", "http://channelstream.net/canal_sport-1.php", "http://channelstream.net/canal_sport_weekend.php", "http://channelstream.net/canal_premier_league.php", "http://channelstream.net/foot_plus.php"]
+index = open('cinema.html', "w")
 
 index.write("<!DOCTYPE html>"
 + "<html lang='en'>"
@@ -26,6 +24,8 @@ index.write("<a href='divertissement.html' class='onglet'>Divertissement</a>")
 index.write("<a href='cinema.html' class='onglet'>Cinema</a>")
 index.write("</div>")
 
+link = ["http://channelstream.net/canal-1.php", "http://channelstream.net/canal_cinema.php", "http://channelstream.net/syfy.php", "http://channelstream.net/canal_decale.php"]
+
 index.write("<div class='contener'>")
 for url in link:
     chanel = requests.get(url)
@@ -36,60 +36,5 @@ for url in link:
     index.write(str(frame_box))
 index.write("</div>")
 
-
-print("Script Foot.py Successeful [👍]")
+print("Script Cinema.py Successeful [👍]")
 index.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
