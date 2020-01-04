@@ -13,7 +13,7 @@ index.write("<!DOCTYPE html>"
     "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"+
     "<meta http-equiv='X-UA-Compatible' content='ie=edge'>" +
     "<link href='style.css' rel='stylesheet'>" +
-    "<title>FCMONt</title>"+
+    "<title>PySPORT</title>"+
 "</head>"+
 "<body>"+
 
