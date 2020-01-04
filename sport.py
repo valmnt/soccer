@@ -4,7 +4,7 @@ import webbrowser
 
 index = open('index.html', "w")
 
-link = ["http://channelstream.net/rmcsport_1.php", "http://channelstream.net/rmcsport_2.php",  "http://channelstream.net/rmcsport_3.php", "http://channelstream.net/canal_sport-1.php", "http://channelstream.net/canal_sport_weekend.php", "http://channelstream.net/canal_premier_league.php", "http://channelstream.net/foot_plus.php"]
+link = ["http://123sport.tv/rmcsport-1.php", "http://123sport.tv/rmcsport-2.php",  "http://123sport.tv/rmcsport-3.php", "http://123sport.tv/canal-sport.php", "http://123sport.tv/foot-plus.php", "http://123sport.tv/beinsport-1.php", "http://123sport.tv/beinsport-2.php", "http://123sport.tv/beinsport-3.php"]
 
 index.write("<!DOCTYPE html>"
 + "<html lang='en'>"
@@ -31,9 +31,13 @@ for url in link:
     chanel = requests.get(url)
     soup = bs4.BeautifulSoup(chanel.text, 'html.parser')
     frame_box = soup.find_all("iframe")
-    text_box = soup.find_all("a", {"class":"article_titre"})
-    index.write("<p>" + str(text_box) + "</p>")
+    text_box = soup.find_all("div", {"class":"details col-sm-6"})
+    index.write(str(text_box))
+    index.write("<div class='boxmain'>")
+    index.write("<div class='box'>")
     index.write(str(frame_box))
+    index.write("</div>")
+    index.write("</div>")
 index.write("</div>")
 
 

@@ -1,7 +1,7 @@
 body{
     background-image: url("https://i.pinimg.com/originals/a9/88/a4/a988a47e605cacc02b0bb41c85270de3.jpg");
 }
-p{
+.details{
     width: 100%;
     text-align: center;
     color: white;
@@ -9,6 +9,15 @@ p{
     font-style: italic;
     background-color: black;
     opacity: 0.6;
+}
+p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+    background-color: black;
+    opacity: 0.6; 
 }
 .contener{
     width: 100%;
@@ -38,4 +47,13 @@ p{
 .ongletmain:hover{
     cursor: pointer;
     opacity: 0.5;
+}
+.box{
+    width: 50%;
+}
+.boxmain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

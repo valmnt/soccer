@@ -24,16 +24,20 @@ index.write("<a href='divertissement.html' class='onglet'>Divertissement</a>")
 index.write("<a href='cinema.html' class='onglet'>Cinema</a>")
 index.write("</div>")
 
-link = ["http://channelstream.net/canal-1.php", "http://channelstream.net/canal_cinema.php", "http://channelstream.net/syfy.php", "http://channelstream.net/canal_decale.php"]
+link = ["http://123sport.tv/canal.php", "http://123sport.tv/canal-cinema.php", "http://123sport.tv/canal-decale.php"]
 
 index.write("<div class='contener'>")
 for url in link:
     chanel = requests.get(url)
     soup = bs4.BeautifulSoup(chanel.text, 'html.parser')
     frame_box = soup.find_all("iframe")
-    text_box = soup.find_all("a", {"class":"article_titre"})
-    index.write("<p>" + str(text_box) + "</p>")
+    text_box = soup.find_all("div", {"class":"details col-sm-6"})
+    index.write(str(text_box))
+    index.write("<div class='boxmain'>")
+    index.write("<div class='box'>")
     index.write(str(frame_box))
+    index.write("</div>")
+    index.write("</div>")
 index.write("</div>")
 
 print("Script Cinema.py Successeful [👍]")
